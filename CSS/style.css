@@ -120,6 +120,7 @@ header .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
 }
+
 header .navbar a{
     display: block;
     padding: 1.5rem;
@@ -127,6 +128,7 @@ header .navbar a{
     font-size: 2rem;
     background: #eee;
 }
+
 #search-form #search-box{
     width: 90%;
     margin: 0 1rem;
@@ -146,13 +148,15 @@ header .navbar a{
     justify-content: center;
     padding: 0 1rem;
 }
+
 #search-form.active{
     top: 0;
 }
+
 #search-form #search-box{
     width: 50rem;
     border-bottom:  .1rem solid #fff;
-    padding-left: 1rerm 0;
+    padding-left: 1rem 0;
     color: #fff;
     font-size: 3rem;
     text-transform: none;
@@ -216,8 +220,8 @@ section{
 .home .home-slider .slide .content span{
     color: var(--green);
     font-size: 2.5rem;
-
 }
+
 .home .home-slider .slide .content h3{
     color: var(--black);
     font-size: 7rem;
@@ -232,6 +236,10 @@ section{
     
 }
 
+.swiper-pagination-bullet-active{
+    background-color: var(--green);
+}
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -240,7 +248,7 @@ section{
     background: var(--black);
     border-radius: .5rem;
     cursor: pointer;
-    padding: 3rem 3rem;
+    padding: 2rem 3rem;
 }
 .btn:hover{
     background: var(--green);
