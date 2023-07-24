@@ -25,6 +25,43 @@ html{
     scroll-behavior: smooth;
 }
 
+section{
+    padding: 2rem 9%;
+}
+
+section:nth-child(even){
+    background: #eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+}
+
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
 header{
     position: fixed;
     top:0; left: 0; right: 0;
@@ -92,7 +129,7 @@ header .icons #menu-bars{
 
 #search-form{
     position: fixed;
-    top: 0%; left: 0;
+    top:-110%; left: 0;
     height: 100%; width: 100%;
     z-index: 1004;
     background: rgba(0,0,0,.8);
@@ -100,6 +137,10 @@ header .icons #menu-bars{
     align-items: center;
     justify-content: center;
     padding: 0 1rem; 
+}
+
+#search-form.active{
+    top:0;
 }
 
 #search-form #search-box{
@@ -127,19 +168,15 @@ header .icons #menu-bars{
 }
 
 #search-form label:hover{
-    color: var(--green);
+    color:var(--green);
 }
 
 #search-form #close{
     position: absolute;
     color: #fff;
     cursor: pointer;
-    top: 2rem; right: 3rem;
+    top:2rem; right:3rem;
     font-size: 5rem;
-}
-
-section{
-    padding: 2rem 9%;
 }
 
 .home .home-slider .slide{
@@ -154,9 +191,6 @@ section{
     flex: 1 1 45rem;
 }
 
-.home .home-slider .slide .content{
-    flex: 1 1 45rem;
-}
 .home .home-slider .slide .image{
     flex: 1 1 45rem;
 }
@@ -173,44 +207,13 @@ section{
 .home .home-slider .slide .content h3{
     color: var(--black);
     font-size: 7rem;
-    
 }
 
 .home .home-slider .slide .content p{
-    color: var(--green);
+    color: var(--light-color);
     font-size: 2.2rem;
     padding: 5rem 0;
-    line-height: 1.5;
-    
-}
-.sub-heading{
-    text-align: center;
-    color: var(--green);
-    font-size: 2rerm;
-    padding-top: 1rem;
-}
-.heading{
-    text-align: center;
-    color: var(--black);
-    font-size: 3rerm;
-    padding-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color: #fff;
-    background: var(--black);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding: 1.5rem 3rem;
-}
-
-.btn:hover{
-    background: var(--green);
-    letter-spacing: .1rem;
+    line-height: 1.5;    
 }
 
 .swiper-pagination-bullet-active{
@@ -219,7 +222,7 @@ section{
 
 .dishes .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 1.5rem;
 }
 
@@ -271,7 +274,7 @@ section{
 
 .dishes .box-container .box img{
     height: 17rem;
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 .dishes .box-container .box h3{
@@ -295,7 +298,7 @@ section{
     font-size: 2.5rem;
 }
 
-.about row {
+.about .row{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -327,7 +330,7 @@ section{
     line-height: 2;
 }
 
-.about .row .content .icons-containers{
+.about .row .content .icons-container{
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -335,14 +338,14 @@ section{
     margin-top: .5rem;
 }
 
-.about .row .content .icons-containers .icons{
+.about .row .content .icons-container .icons{
     background: #eee;
     border-radius: .5rem;
     border: .1rem solid rgba(0,0,0,.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap:1rem;
     flex: 1 1 17rem;
     padding: 1.5rem 1rem;
 }
@@ -351,10 +354,10 @@ section{
     font-size: 2.5rem;
     color: var(--green);
 }
-
+     
 .about .row .content .icons-containers .icons span{
     font-size: 2.5rem;
-    color: var(--green);
+    color: var(--black);
 }
 
 .menu .box-container{
@@ -436,16 +439,16 @@ section{
 }
 
 .review .slide{
-    padding: 2rem;
+    padding:2rem;
     box-shadow: var(--box-shadow);
-    border: .1rem solid rgb(0,0,0,.2);
+    border:.1rem solid rgb(0,0,0,.2);
     border-radius: 5rem;
     position: relative;
 }
 
 .review .slide .fa-quote-right{
     position: absolute;
-    top:2rem; right: 2rem;
+    top:2rem; right:2rem;
     font-size: 6rem;
     color: #ccc;
 }
@@ -489,7 +492,6 @@ section{
     background: #fff;
     padding:1.5rem;
     margin: 0 auto;
-
 }
 
 .order form .inputBox{
@@ -513,7 +515,7 @@ section{
 .order form .inputBox .input textarea{
     background: #eee;
     border-radius: .5rem;
-    padding: 1rem;
+    padding:1rem;
     font-size: 1.6rem;
     color:var(--black);
     text-transform: none;
@@ -553,7 +555,7 @@ section{
     font-size: 1.5rem;
     color:var(--light-color);
 }
-
+ 
 .footer .box-container .box a:hover{
     color: var(--green);
     text-decoration: underline;
@@ -591,7 +593,7 @@ section{
 }
 
 .loader-container.fade-out{
-    top: 110%;
+    top:110%;
     opacity:0;
 }
 
@@ -663,8 +665,8 @@ header .navbar a{
     }
 
     .dishes .box-container .box img{
-        height: auto;
-        width: 100%;
+        height:auto;
+        width:100%;
     }
 
     .order form .inputBox .input{
